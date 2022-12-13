@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 
 static const char *fonts[]          = {
-	"WenQuanYi Micro Hei:size=10:type=Regular:antialias=true:autohint=true",
+	"Noto Sans Mono CJK SC:size=10:type=Regular:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=12:type=Regular:antialias=true:autohint=true"
 	"Symbols Nerd Font:pixelsize=14:type=2048-em:antialias=true:autohint=true",
 };
