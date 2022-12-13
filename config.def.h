@@ -71,6 +71,12 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_F1,     spawn,          SHCMD("pulsemixer --toggle-mute; pkill -RTMIN+5 dwmblocks") },
+	{ MODKEY,                       XK_F2,     spawn,          SHCMD("pulsemixer --change-volume -5; pkill -RTMIN+5 dwmblocks") },
+	{ MODKEY,                       XK_F3,     spawn,          SHCMD("pulsemixer --change-volume +5; pkill -RTMIN+5 dwmblocks") },
+	{ MODKEY,                       XK_F4,     spawn,          SHCMD("pulsemixer --id `pulsemixer -l | grep Source | grep Default | awk -F\"[ ,]\" \'{print $3}\'` --toggle-mute; pkill -RTMIN+4 dwmblocks") },
+	{ MODKEY,                       XK_F5,     spawn,          SHCMD("light -U 10") },
+	{ MODKEY,                       XK_F6,     spawn,          SHCMD("light -A 10") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
