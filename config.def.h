@@ -73,6 +73,9 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
+	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("flameshot screen") },
+	{ ControlMask,                  XK_Print,  spawn,          SHCMD("flameshot launcher") },
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("pulsemixer --toggle-mute; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F2,     spawn,          SHCMD("pulsemixer --change-volume -5; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("pulsemixer --change-volume +5; pkill -RTMIN+5 dwmblocks") },
