@@ -9,9 +9,9 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 
 static const char *fonts[]          = {
+	"Symbols Nerd Font:pixelsize=12:type=2048-em:antialias=true:autohint=true",
 	"Noto Sans Mono CJK SC:size=9:type=Regular:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=10:type=Regular:antialias=true:autohint=true"
-	"Symbols Nerd Font:pixelsize=12:type=2048-em:antialias=true:autohint=true",
 };
 
 static const char dmenufont[]       = "Noto Sans Mono CJK SC:size=9:type=Regular:antialias=true:autohint=true";
@@ -28,7 +28,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "5", "6", "7", "8", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
