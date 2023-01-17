@@ -90,6 +90,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *clipmenucmd[] = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,6 +98,7 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
 	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("flameshot screen") },
 	{ ControlMask,                  XK_Print,  spawn,          SHCMD("flameshot launcher") },
+	{ MODKEY,			XK_v,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("pulsemixer --toggle-mute; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F2,     spawn,          SHCMD("if [ `pulsemixer --get-mute` = 1 ]; then pulsemixer --toggle-mute; fi; pulsemixer --change-volume -5; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("if [ `pulsemixer --get-mute` = 1 ]; then pulsemixer --toggle-mute; fi; pulsemixer --change-volume +5; pkill -RTMIN+5 dwmblocks") },
