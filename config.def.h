@@ -99,6 +99,7 @@ static const Key keys[] = {
 	{ ShiftMask,                    XK_Print,  spawn,          SHCMD("flameshot screen") },
 	{ ControlMask,                  XK_Print,  spawn,          SHCMD("flameshot launcher") },
 	{ MODKEY,			XK_v,      spawn,          {.v = clipmenucmd } },
+	{ MODKEY,			XK_w,      spawn,          SHCMD("switch") },
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("pulsemixer --toggle-mute; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F2,     spawn,          SHCMD("if [ `pulsemixer --get-mute` = 1 ]; then pulsemixer --toggle-mute; fi; pulsemixer --change-volume -5; pkill -RTMIN+5 dwmblocks") },
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("if [ `pulsemixer --get-mute` = 1 ]; then pulsemixer --toggle-mute; fi; pulsemixer --change-volume +5; pkill -RTMIN+5 dwmblocks") },
