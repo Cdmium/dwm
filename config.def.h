@@ -35,12 +35,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "256x60", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "256x60", "-e", "ranger", NULL };
-const char *spcmd3[] = {"keepassxc", NULL };
+const char *spcmd3[] = {"speedcrunch", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spranger",    spcmd2},
-	{"keepassxc",   spcmd3},
+	{"speedcrunch",   spcmd3},
 };
 
 /* tagging */
@@ -48,16 +48,16 @@ static const char *tags[] = { "", "", "", "", "5", "6", "7", "﬜", 
 
 static const Rule rules[] = {
         /* xprop(1):
-	 *          *      WM_CLASS(STRING) = instance, class
-	 *                   *      WM_NAME(STRING) = title
-	 *                            */
+	 *      WM_CLASS(STRING) = instance, class
+	 *      WM_NAME(STRING) = title
+	 */
         /* class              instance        title       tags mask     isfloating   monitor */
         { "GoldenDict",       NULL,           NULL,       1 << 7,       0,           -1 },
         { "Wine",             "wechat.exe",   NULL,       1 << 8,       0,           -1 },
         { "Wine",             "explorer.exe", NULL,       1 << 8,       1,           -1 },
 	{ NULL,               "spterm",       NULL,       SPTAG(0),     1,           -1 },
 	{ NULL,               "spfm",         NULL,       SPTAG(1),     1,           -1 },
-	{ NULL,               "keepassxc",    NULL,       SPTAG(2),     0,           -1 },
+	{ NULL,	              "speedcrunch",  NULL,	  SPTAG(2),	1,	     -1 },
 };
 
 /* layout(s) */
