@@ -56,6 +56,7 @@ static const Rule rules[] = {
         { "Wine",             "wechat.exe",   NULL,       1 << 8,       0,           -1 },
         { "Wine",             "explorer.exe", NULL,       1 << 8,       1,           -1 },
 	{ "fiji-Main",        NULL,           NULL,       0,            1,           -1 },
+	{ "wemeetapp",        "wemeetapp",    NULL,       0,            1,           -1 },
 	{ NULL,               "spterm",       NULL,       SPTAG(0),     1,           -1 },
 	{ NULL,               "spfm",         NULL,       SPTAG(1),     1,           -1 },
 	{ NULL,	              "speedcrunch",  NULL,	  SPTAG(2),	1,	     -1 },
