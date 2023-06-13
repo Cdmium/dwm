@@ -44,7 +44,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "5", "6", "7", "󰘝", "" };
+static const char *tags[] = { "", "", "", "", "5", "6", "7", "", "󰘝", "" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -52,11 +52,12 @@ static const Rule rules[] = {
 	 *      WM_NAME(STRING) = title
 	 */
         /* class              instance        title       tags mask     isfloating   monitor */
-        { "GoldenDict",       NULL,           NULL,       1 << 7,       0,           -1 },
-        { "Wine",             "wechat.exe",   NULL,       1 << 8,       0,           -1 },
-        { "Wine",             "explorer.exe", NULL,       1 << 8,       1,           -1 },
+        { "GoldenDict",       NULL,           NULL,       1 << 8,       0,           -1 },
+        { "Wine",             "wechat.exe",   NULL,       1 << 9,       0,           -1 },
+        { "Wine",             "explorer.exe", NULL,       1 << 9,       1,           -1 },
 	{ "fiji-Main",        NULL,           NULL,       0,            1,           -1 },
 	{ "wemeetapp",        "wemeetapp",    NULL,       0,            1,           -1 },
+	{ "qqmusic",          "qqmusic",      NULL,       1 << 7,         0,           -1 },
 	{ NULL,               "spterm",       NULL,       SPTAG(0),     1,           -1 },
 	{ NULL,               "spfm",         NULL,       SPTAG(1),     1,           -1 },
 	{ NULL,	              "speedcrunch",  NULL,	  SPTAG(2),	1,	     -1 },
@@ -129,8 +130,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	// { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	// { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
@@ -150,6 +151,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_0,                      9)
 	{ MODKEY|ControlMask|ShiftMask, XK_Escape, quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
 };
