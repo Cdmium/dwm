@@ -57,6 +57,8 @@ static const Rule rules[] = {
         { "Wine",             "explorer.exe", NULL,       1 << 9,       1,           -1 },
 	{ "fiji-Main",        NULL,           NULL,       0,            1,           -1 },
 	{ "wemeetapp",        "wemeetapp",    NULL,       0,            1,           -1 },
+	{ "pyflow",           "pyflow",       "",         0,            1,           -1 },
+	{ "pyflow",           "pyflow",       "PyFlow",   0,            0,           -1 },
 	{ "qqmusic",          "qqmusic",      NULL,       1 << 7,       0,           -1 },
 	{ "Anki",             "anki",         NULL,       1 << 6,       0,           -1 },
 	{ "Google-chrome",    "google-chrome",NULL,       1 << 1,       0,           -1 },
